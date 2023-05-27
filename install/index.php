@@ -2,6 +2,11 @@
 
 <div class="row mt-5">
     <div class="col-6 offset-3">
+        <?php if($message): ?>
+            <div class="alert alert-info">
+                <p class="mb-0"><?= $message; ?></p>
+            </div>
+        <?php endif; ?>
         <form action="" method="POST">
             <div class="form-group">
                 <label for="host">Host</label>
