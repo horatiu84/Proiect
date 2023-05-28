@@ -24,7 +24,7 @@ if (isset($_POST) && $_POST) {
         $sql_user = "CREATE TABLE IF NOT EXISTS users (
                 id INT(11) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
                 username VARCHAR(50) NOT NULL,
-                passworkd VARCHAR(100) NOT NULL,
+                password VARCHAR(100) NOT NULL,
                 token VARCHAR(100),
                 created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
                 updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
@@ -32,6 +32,7 @@ if (isset($_POST) && $_POST) {
 
         $sql_profile = "CREATE TABLE IF NOT EXISTS users_profile (
             id INT(11) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+            user_id INT(11) ,
             first_name VARCHAR(50) ,
             last_name VARCHAR(50) ,
             email VARCHAR(100),

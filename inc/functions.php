@@ -7,6 +7,27 @@ function dd($text) {
     exit;
 }
 
+function invalidInputClass($errors, $input_name) {
+    return isset($errors[$input_name]) && count($errors[$input_name]) ? 'is-invalid' : '';
+}
+
+function old($input_name) {
+    return (isset($_POST[$input_name]) && $_POST[$input_name]) ? $_POST[$input_name] : '';
+}
+
+function getErrors($errors, $input_name) {
+    if(isset($errors[$input_name]) && count($errors[$input_name])) {
+         $output = '';
+        foreach($errors[$input_name] as $error) {
+            $output .= '<div class="invalid-feedback">'.$error.'</div>';
+        }
+        return $output;
+    
+    } 
+    return null;
+    
+}
+
 function validate($data, $rules) {
     $errors = [];
 

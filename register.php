@@ -10,32 +10,39 @@
             <form action="" method="POST">
                 <div class="form-group">
                     <label for="username">Username</label>
-                    <input type="text" name="username" id="username" class="form-control">
+                    <input value="<?= old('username') ?>" type="text" name="username" id="username" class="form-control <?= invalidInputClass($errors, 'username'); ?>">
+                    <?=  getErrors($errors,'username');  ?> 
                 </div>
                 <div class="form-group">
                     <label for="password">Password</label>
-                    <input type="text" name="password" id="password" class="form-control">
+                    <input type="text" name="password" id="password" class="form-control <?= invalidInputClass($errors, 'password'); ?>">
+                    <?=  getErrors($errors,'password');  ?> 
                 </div>
                 <div class="form-group">
                     <label for="confirm_password">Confirm password</label>
-                    <input type="text" name="confirm_password" id="confirm_password" class="form-control">
+                    <input type="text" name="confirm_password" id="confirm_password" class="form-control <?= invalidInputClass($errors, 'confirm_password'); ?>">
+                    <?=  getErrors($errors,'confirm_password');  ?> 
                 </div>
 
                 <div class="form-group">
                     <label for="email">Email</label>
-                    <input type="email" name="email" id="email" class="form-control">
+                    <input value="<?= old('email') ?>" type="email" name="email" id="email" class="form-control <?= invalidInputClass($errors, 'email'); ?>">
+                    <?=  getErrors($errors,'email');  ?> 
                 </div>
                 <div class="form-group">
                     <label for="first_name">First name</label>
-                    <input type="text" name="first_name" id="first_name" class="form-control">
+                    <input value="<?= old('first_name') ?>" type="text" name="first_name" id="first_name" class="form-control <?= invalidInputClass($errors, 'first_name'); ?>">
+                    <?=  getErrors($errors,'first_name');  ?> 
                 </div>
                 <div class="form-group">
                     <label for="last_name">Last name</label>
-                    <input type="text" name="last_name" id="last_name" class="form-control">
+                    <input value="<?= old('last_name') ?>" type="text" name="last_name" id="last_name" class="form-control <?= invalidInputClass($errors, 'last_name'); ?>">
+                    <?=  getErrors($errors,'last_name');  ?> 
                 </div>
                 <div class="form-group">
                     <label for="phone">Phone</label>
-                    <input type="text" name="phone" id="phone" class="form-control">
+                    <input value="<?= old('phone') ?>" type="text" name="phone" id="phone" class="form-control <?= invalidInputClass($errors, 'phone'); ?>">
+                    <?=  getErrors($errors,'phone');  ?> 
                 </div>
                 <div class="form-group text-center">
                     <button class="btn btn-sm btn-success">Create account</button>
